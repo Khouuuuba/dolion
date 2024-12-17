@@ -44,10 +44,10 @@ export function WaitlistForm() {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
-      className="max-w-xl mx-auto text-center space-y-6 md:space-y-8 py-4 md:py-8 px-4"
+      className="max-w-xl mx-auto text-center space-y-4 md:space-y-8 px-2 md:px-4"
     >
-      <div className="space-y-3 md:space-y-4">
-        <h2 className="text-2xl md:text-3xl font-bold text-foreground font-serif">
+      <div className="space-y-2 md:space-y-4">
+        <h2 className="text-xl md:text-3xl font-bold text-foreground font-serif">
           Join the Waitlist
         </h2>
         <p className="text-sm md:text-lg text-foreground/80 font-medium">
@@ -55,8 +55,8 @@ export function WaitlistForm() {
         </p>
       </div>
 
-      <form onSubmit={handleSubmit} className="flex flex-col gap-4">
-        <div className="flex flex-col md:flex-row justify-center gap-4 md:gap-6 mb-4">
+      <form onSubmit={handleSubmit} className="flex flex-col gap-4 max-w-sm mx-auto">
+        <div className="grid grid-cols-1 gap-2 mb-4">
           <div className="flex items-center space-x-2">
             <Checkbox
               checked={isInfluencer}
@@ -96,7 +96,7 @@ export function WaitlistForm() {
             className="flex-1 text-foreground placeholder:text-foreground/60"
           />
 
-          <Button type="submit" size="lg" className="font-semibold w-full md:w-auto">
+          <Button type="submit" size="lg" className="font-semibold w-full">
             Join Waitlist
           </Button>
         </div>
