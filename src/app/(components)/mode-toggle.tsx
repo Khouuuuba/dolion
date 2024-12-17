@@ -5,10 +5,10 @@ import { Button } from "@/components/ui/button";
 import { SunIcon, MoonIcon } from "lucide-react";
 
 export function ModeToggle() {
-  const [theme, setTheme] = React.useState("light");
+  const [theme, setTheme] = React.useState("dark");
 
   const toggleTheme = () => {
-    const newTheme = theme === "light" ? "dark" : "light";
+    const newTheme = theme === "dark" ? "light" : "dark";
     setTheme(newTheme);
     document.documentElement.classList.toggle("dark");
   };
