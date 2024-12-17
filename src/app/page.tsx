@@ -26,7 +26,7 @@ export default function Home() {
               alt="Social Platforms"
               width={450}
               height={56}
-              className="w-[75%] md:w-[62.5%] h-auto object-contain brightness-0 invert"
+              className="w-[80%] md:w-[65%] h-auto object-contain brightness-0 invert"
             />
           </div>
         </div>

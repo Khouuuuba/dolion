@@ -47,7 +47,7 @@ export function WaitlistForm() {
       className="max-w-xl mx-auto text-center space-y-4 md:space-y-8 px-2 md:px-4"
     >
       <div className="space-y-2 md:space-y-4">
-        <h2 className="text-xl md:text-3xl font-bold text-foreground">
+        <h2 className="text-xl md:text-3xl font-bold text-foreground font-serif">
           Join the Waitlist
         </h2>
         <p className="text-sm md:text-lg text-foreground/80 font-medium">
@@ -56,13 +56,13 @@ export function WaitlistForm() {
       </div>
 
       <form onSubmit={handleSubmit} className="flex flex-col gap-4 max-w-sm mx-auto">
-        <div className="grid grid-cols-1 gap-2 mb-4">
+        <div className="flex flex-col md:flex-row justify-center gap-4 mb-4">
           <div className="flex items-center space-x-2">
             <Checkbox
               checked={isInfluencer}
               onCheckedChange={(checked) => setIsInfluencer(checked as boolean)}
             />
-            <label className="text-sm font-medium leading-none">
+            <label className="text-sm font-medium leading-none whitespace-nowrap">
               I'm an influencer
             </label>
           </div>
@@ -71,7 +71,7 @@ export function WaitlistForm() {
               checked={isAgency}
               onCheckedChange={(checked) => setIsAgency(checked as boolean)}
             />
-            <label className="text-sm font-medium leading-none">
+            <label className="text-sm font-medium leading-none whitespace-nowrap">
               I'm a business
             </label>
           </div>
@@ -80,7 +80,7 @@ export function WaitlistForm() {
               checked={isIndividual}
               onCheckedChange={(checked) => setIsIndividual(checked as boolean)}
             />
-            <label className="text-sm font-medium leading-none">
+            <label className="text-sm font-medium leading-none whitespace-nowrap">
               I'm an individual
             </label>
           </div>
