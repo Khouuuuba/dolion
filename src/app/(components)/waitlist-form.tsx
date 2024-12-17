@@ -47,7 +47,7 @@ export function WaitlistForm() {
       className="max-w-xl mx-auto text-center space-y-4 md:space-y-8 px-2 md:px-4"
     >
       <div className="space-y-2 md:space-y-4">
-        <h2 className="text-xl md:text-3xl font-bold text-foreground font-serif">
+        <h2 className="text-xl md:text-3xl font-bold text-foreground">
           Join the Waitlist
         </h2>
         <p className="text-sm md:text-lg text-foreground/80 font-medium">
@@ -72,7 +72,7 @@ export function WaitlistForm() {
               onCheckedChange={(checked) => setIsAgency(checked as boolean)}
             />
             <label className="text-sm font-medium leading-none whitespace-nowrap">
-              I'm a business
+              I'm a brand
             </label>
           </div>
           <div className="flex items-center space-x-2">
