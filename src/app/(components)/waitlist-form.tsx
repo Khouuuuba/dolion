@@ -44,31 +44,25 @@ export function WaitlistForm() {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
-      className="max-w-xl mx-auto text-center space-y-8 py-8"
+      className="max-w-xl mx-auto text-center space-y-6 md:space-y-8 py-4 md:py-8 px-4"
     >
-      <div className="space-y-4">
-        <h2
-          className="text-3xl font-bold text-foreground font-serif"
-        >
+      <div className="space-y-3 md:space-y-4">
+        <h2 className="text-2xl md:text-3xl font-bold text-foreground font-serif">
           Join the Waitlist
         </h2>
-        <p className="text-foreground/80 font-medium text-lg">
+        <p className="text-sm md:text-lg text-foreground/80 font-medium">
           Experience the future of AI-powered social influence.
         </p>
       </div>
 
       <form onSubmit={handleSubmit} className="flex flex-col gap-4">
-        <div className="flex justify-center gap-6 mb-4">
+        <div className="flex flex-col md:flex-row justify-center gap-4 md:gap-6 mb-4">
           <div className="flex items-center space-x-2">
             <Checkbox
               checked={isInfluencer}
               onCheckedChange={(checked) => setIsInfluencer(checked as boolean)}
             />
-
-            <label
-              htmlFor="influencer"
-              className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-            >
+            <label className="text-sm font-medium leading-none">
               I'm an influencer
             </label>
           </div>
@@ -77,11 +71,7 @@ export function WaitlistForm() {
               checked={isAgency}
               onCheckedChange={(checked) => setIsAgency(checked as boolean)}
             />
-
-            <label
-              htmlFor="agency"
-              className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-            >
+            <label className="text-sm font-medium leading-none">
               I'm a business
             </label>
           </div>
@@ -90,17 +80,13 @@ export function WaitlistForm() {
               checked={isIndividual}
               onCheckedChange={(checked) => setIsIndividual(checked as boolean)}
             />
-
-            <label
-              htmlFor="individual"
-              className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-            >
+            <label className="text-sm font-medium leading-none">
               I'm an individual
             </label>
           </div>
         </div>
 
-        <div className="flex flex-col sm:flex-row gap-4">
+        <div className="flex flex-col gap-3">
           <Input
             type="email"
             placeholder="Enter your email"
@@ -110,7 +96,7 @@ export function WaitlistForm() {
             className="flex-1 text-foreground placeholder:text-foreground/60"
           />
 
-          <Button type="submit" size="lg" className="font-semibold">
+          <Button type="submit" size="lg" className="font-semibold w-full md:w-auto">
             Join Waitlist
           </Button>
         </div>
